@@ -90,7 +90,10 @@
           </div>
         </div>
         <div class="input-group">
-          <label for="bill-input">Number of People</label>
+          <div class="label-ms-container">
+            <label for="bill-input">Number of People</label>
+            <span class="error-message">Can't be zero</span>
+          </div>
           <div class="input-box">
             <img
               src="./images/icon-person.svg"
@@ -109,14 +112,14 @@
         <div class="tip-container">
           <div class="text-container">
             <p class="tip-amount-text">Tip Amount</p>
-            <span>/ person</span>
+            <span class="sp-text">/ person</span>
           </div>
           <p class="tip-amount" id="tip-amount">$0.00</p>
         </div>
         <div class="total-container">
           <div class="text-container">
             <p class="total-amount-text">Total</p>
-            <span>/ person</span>
+            <span class="sp-text">/ person</span>
           </div>
           <p class="total-amount" id="total-amount">$0.00</p>
         </div>

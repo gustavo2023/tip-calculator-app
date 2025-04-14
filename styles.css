@@ -260,4 +260,8 @@ input[type="radio"]:checked + label {
   main {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .tip-percentage-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

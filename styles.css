@@ -101,7 +101,7 @@ body {
   background-color: var(--grey-200);
   font-family: "Space Mono", monospace;
   height: fit-content;
-  padding: 48px 0 0 0;
+  padding: 24px 0 0 0;
 }
 
 header {
@@ -109,6 +109,7 @@ header {
 }
 
 main {
+  max-width: 60rem;
   background-color: white;
   padding: 2rem;
   border-radius: 1rem;
@@ -317,12 +318,25 @@ input[type="radio"]:checked + label {
   cursor: not-allowed;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 55rem) {
   main {
     grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
   }
 
   .tip-percentage-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .display-container {
+    padding: 3rem 2rem;
+  }
+
+  .total-container {
+    margin-bottom: 6rem;
+  }
+
+  .reset-btn {
+    margin-top: auto;
   }
 }

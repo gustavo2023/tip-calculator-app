@@ -133,7 +133,7 @@ main {
 .input-group label,
 .tip-percentage-label,
 .error-message {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--grey-500);
 }
@@ -220,12 +220,12 @@ main {
 
 .tip-option label {
   background-color: var(--green-900);
-  color: white;
+  color: var(--grey-50);
 }
 
 input[type="radio"]:checked + label {
   background-color: var(--green-400);
-  color: white;
+  color: var(--green-900);
 }
 
 .custom-tip {
@@ -254,6 +254,15 @@ input[type="radio"]:checked + label {
 
 .error {
   border-color: #ff6257;
+}
+
+.display-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--green-900);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
 }
 
 @media (min-width: 25rem) {

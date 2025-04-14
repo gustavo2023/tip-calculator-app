@@ -38,7 +38,7 @@
           <label for="bill-input">Bill</label>
           <input
             class="bill-input"
-            type="text"
+            type="number"
             id="bill-input"
             placeholder="0"
             aria-label="Enter bill amount"
@@ -80,7 +80,7 @@
             <div class="tip-option">
               <input
                 class="custom-tip"
-                type="text"
+                type="number"
                 name="tip"
                 id="tip-custom"
                 placeholder="Custom"
@@ -95,7 +95,7 @@
           </div>
           <input
             class="people-input"
-            type="text"
+            type="number"
             id="people-input"
             placeholder="0"
             aria-label="Enter the number of people to split the bill"
@@ -117,7 +117,7 @@
           </div>
           <p class="total-amount" id="total-amount">$0.00</p>
         </div>
-        <button class="reset-btn" disabled>RESET</button>
+        <button class="reset-btn" id="reset-btn" disabled>RESET</button>
       </div>
     </main>
   </body>

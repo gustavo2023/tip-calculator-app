@@ -222,6 +222,11 @@ main {
   color: white;
 }
 
+input[type="radio"]:checked + label {
+  background-color: var(--green-400);
+  color: white;
+}
+
 .custom-tip {
   background-color: var(--grey-50);
   border: none;

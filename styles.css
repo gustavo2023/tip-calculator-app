@@ -180,7 +180,8 @@ input::-webkit-inner-spin-button {
 .bill-input:focus,
 .people-input:focus,
 .custom-tip:focus {
-  outline: var(--green-400) solid 2px;
+  border: var(--green-400) solid 2px;
+  outline: none;
 }
 
 .tip-percentages {

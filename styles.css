@@ -99,7 +99,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--grey-200);
-  font-family: "Space-Mono", monospace;
+  font-family: "Space Mono", monospace;
 }
 
 header {
@@ -135,6 +135,43 @@ main {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--grey-500);
+}
+
+.bill-input,
+.people-input {
+  width: 100%;
+  border: none;
+  background-color: var(--grey-50);
+  font-size: 1.5rem;
+  text-align: right;
+  color: var(--green-900);
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  background-repeat: no-repeat;
+  background-position: left 1rem center;
+  background-size: 0.7rem;
+  caret-color: var(--green-400);
+  cursor: pointer;
+}
+
+.bill-input {
+  background-image: url("./images/icon-dollar.svg");
+}
+
+.people-input {
+  background-image: url("./images/icon-person.svg");
+}
+
+.bill-input::placeholder,
+.people-input::placeholder {
+  color: var(--grey-400);
+  font-weight: 400;
+}
+
+.bill-input:focus,
+.people-input:focus {
+  outline: var(--green-400) solid 2px;
 }
 
 @media (min-width: 25rem) {

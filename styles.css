@@ -311,6 +311,12 @@ input[type="radio"]:checked + label {
   transition: all 0.2s ease-in-out;
 }
 
+.reset-btn:disabled {
+  background-color: #0d686d;
+  color: var(--green-900);
+  cursor: not-allowed;
+}
+
 @media (min-width: 48rem) {
   main {
     grid-template-columns: repeat(2, 1fr);

@@ -131,7 +131,8 @@ main {
 }
 
 .input-group label,
-.tip-percentage-label {
+.tip-percentage-label,
+.error-message {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--grey-500);
@@ -237,6 +238,22 @@ input[type="radio"]:checked + label {
 .custom-tip::placeholder {
   color: var(--grey-500);
   font-weight: 600;
+}
+
+.label-ms-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.error-message {
+  display: none;
+  color: #ff6257;
+}
+
+.error {
+  border-color: #ff6257;
 }
 
 @media (min-width: 25rem) {

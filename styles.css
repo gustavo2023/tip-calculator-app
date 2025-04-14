@@ -141,6 +141,10 @@ main {
   color: var(--grey-500);
 }
 
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .bill-input,
 .people-input {
   width: 100%;

@@ -112,13 +112,13 @@ main {
   border-radius: 1rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .inputs-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
 }
@@ -172,6 +172,23 @@ main {
 .bill-input:focus,
 .people-input:focus {
   outline: var(--green-400) solid 2px;
+}
+
+.tip-percentages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.tip-percentage-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 @media (min-width: 25rem) {

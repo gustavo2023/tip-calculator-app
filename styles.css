@@ -100,6 +100,8 @@ body {
   align-items: center;
   background-color: var(--grey-200);
   font-family: "Space Mono", monospace;
+  height: fit-content;
+  padding: 48px 0 0 0;
 }
 
 header {
@@ -261,11 +263,55 @@ input[type="radio"]:checked + label {
   flex-direction: column;
   justify-content: center;
   background-color: var(--green-900);
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
+  gap: 2rem;
   border-radius: 1rem;
 }
 
-@media (min-width: 25rem) {
+.tip-container,
+.total-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tip-amount-text,
+.total-amount-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--grey-50);
+}
+
+.sp-text {
+  color: var(--grey-400);
+  font-weight: 600;
+}
+
+.tip-amount,
+.total-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--green-400);
+}
+
+.reset-btn {
+  background-color: var(--green-400);
+  color: var(--green-900);
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+@media (min-width: 48rem) {
   main {
     grid-template-columns: repeat(2, 1fr);
   }

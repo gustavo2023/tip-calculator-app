@@ -263,7 +263,7 @@ input[type="radio"]:checked + label {
 }
 
 .error {
-  border-color: #ff6257;
+  border: 2px solid #ff6257;
 }
 
 .display-container {

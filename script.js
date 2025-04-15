@@ -10,8 +10,10 @@ const customTipInput = document.getElementById("tip-custom");
 const initiateCalculator = () => {
   tipRadios.forEach((radio) => {
     radio.addEventListener("change", () => {
-      customTipInput.value = ""; // Clear custom input when a radio button is selected
-      calculateTip(); // Recalculate tip when a radio button is selected
+      if (radio.checked) {
+        customTipInput.value = ""; // Clear custom input only when a radio button is selected
+        calculateTip(); // Recalculate tip when a radio button is selected
+      }
     });
   });
 
@@ -28,7 +30,8 @@ const initiateCalculator = () => {
 
 const calculateTip = () => {
   const bill = parseFloat(totalBillInput.value) || 0; // Default to 0 if input is empty
-  const numberOfPeople = parseInt(numberOfPeopleInput.value) || 1; // Default to 1 if input is empty
+  const numberOfPeopleValue = numberOfPeopleInput.value.trim(); // Get the raw input value
+  const numberOfPeople = parseInt(numberOfPeopleValue, 10); // Parse as integer
   let tipPercentage = 0;
 
   // Get the selected tip percentage from radio buttons or custom input
@@ -43,15 +46,24 @@ const calculateTip = () => {
   }
 
   // Validate inputs
-  if (numberOfPeople <= 0) {
+  if (numberOfPeopleValue === "0") {
+    // Explicitly check if the user entered 0
     errorMessage.style.display = "block";
     numberOfPeopleInput.classList.add("error");
+    numberOfPeopleInput.blur(); // Remove focus from the input
     tipAmountPerPerson.textContent = "$0.00";
     totalAmountPerPerson.textContent = "$0.00";
     return; // Stop further calculations
   } else {
     errorMessage.style.display = "none";
     numberOfPeopleInput.classList.remove("error");
+  }
+
+  // If the input is empty, do not calculate yet
+  if (!numberOfPeopleValue) {
+    tipAmountPerPerson.textContent = "$0.00";
+    totalAmountPerPerson.textContent = "$0.00";
+    return;
   }
 
   // Calculate tip and total amounts

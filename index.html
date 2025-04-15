@@ -30,6 +30,7 @@
         src="./images/logo.svg"
         alt="Tip Calculator App logo with stylized text design"
         loading="eager"
+        role="img"
       />
     </header>
     <main>
@@ -45,8 +46,12 @@
           />
         </div>
         <div class="tip-percentages">
-          <p class="tip-percentage-label">Select Tip %</p>
-          <div class="tip-percentage-container">
+          <p class="tip-percentage-label" id="tip-label">Select Tip %</p>
+          <div
+            class="tip-percentage-container"
+            role="radiogroup"
+            aria-labelledby="tip-label"
+          >
             <div class="tip-option">
               <input type="radio" name="tip" id="tip5" value="0.05" /><label
                 for="tip5"
@@ -91,7 +96,7 @@
         <div class="input-group">
           <div class="label-ms-container">
             <label for="people-input">Number of People</label>
-            <span class="error-message">Can't be zero</span>
+            <span class="error-message" aria-live="polite">Can't be zero</span>
           </div>
           <input
             class="people-input"
@@ -108,16 +113,18 @@
             <p class="tip-amount-text">Tip Amount</p>
             <span class="sp-text">/ person</span>
           </div>
-          <p class="tip-amount" id="tip-amount">$0.00</p>
+          <p class="tip-amount" id="tip-amount" aria-live="polite">$0.00</p>
         </div>
         <div class="total-container">
           <div class="text-container">
             <p class="total-amount-text">Total</p>
             <span class="sp-text">/ person</span>
           </div>
-          <p class="total-amount" id="total-amount">$0.00</p>
+          <p class="total-amount" id="total-amount" aria-live="polite">$0.00</p>
         </div>
-        <button class="reset-btn" id="reset-btn" disabled>RESET</button>
+        <button class="reset-btn" id="reset-btn" disabled aria-disabled="true">
+          RESET
+        </button>
       </div>
     </main>
   </body>

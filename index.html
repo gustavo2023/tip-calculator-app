@@ -33,7 +33,7 @@
       />
     </header>
     <main>
-      <div class="inputs-container">
+      <form class="inputs-container">
         <div class="input-group">
           <label for="bill-input">Bill</label>
           <input
@@ -44,8 +44,10 @@
             aria-label="Enter bill amount"
           />
         </div>
-        <div class="tip-percentages">
-          <p class="tip-percentage-label" id="tip-label">Select Tip %</p>
+        <fieldset class="tip-percentages">
+          <legend class="tip-percentage-label" id="tip-label">
+            Select Tip %
+          </legend>
           <div
             class="tip-percentage-container"
             role="radiogroup"
@@ -91,7 +93,7 @@
               />
             </div>
           </div>
-        </div>
+        </fieldset>
         <div class="input-group">
           <div class="label-ms-container">
             <label for="people-input">Number of People</label>
@@ -105,8 +107,9 @@
             aria-label="Enter the number of people to split the bill"
           />
         </div>
-      </div>
-      <div class="display-container">
+      </form>
+      <section class="display-container" aria-labelledby="results-title">
+        <h2 id="results-title" class="visually-hidden">Calculation Results</h2>
         <div class="tip-container">
           <div class="text-container">
             <p class="tip-amount-text">Tip Amount</p>
@@ -122,7 +125,7 @@
           <p class="total-amount" id="total-amount" aria-live="polite">$0.00</p>
         </div>
         <button class="reset-btn" id="reset-btn" disabled>RESET</button>
-      </div>
+      </section>
     </main>
   </body>
 </html>
